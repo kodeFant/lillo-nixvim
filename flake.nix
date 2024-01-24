@@ -12,7 +12,7 @@
     flake-parts,
     ...
   } @ inputs: let
-    config = import ./config; # import the module directly
+
   in
     flake-parts.lib.mkFlake {inherit inputs;} {
       systems = [
@@ -31,7 +31,7 @@
         nixvim' = nixvim.legacyPackages.${system};
         nvim = nixvim'.makeNixvimWithModule {
           inherit pkgs;
-          module = config;
+          module = import ./config { pkgs = pkgs; };
           # You can use `extraSpecialArgs` to pass additional arguments to your module files
           extraSpecialArgs = {
             # inherit (inputs) foo;
@@ -45,7 +45,6 @@
             name = "A nixvim configuration";
           };
         };
-
         packages = {
           # Lets you run `nix run .` to start nixvim
           default = nvim;

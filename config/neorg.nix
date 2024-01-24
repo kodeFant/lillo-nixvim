@@ -8,8 +8,7 @@
       "core.dirman" = {
         config = {
           workspaces = {
-            home = "~/kodefant-holding/org/home";
-            work = "~/kodefant-holding/org/work";
+            work = "~/kodefant-holding/";
           };
         };
       };
