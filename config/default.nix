@@ -7,4 +7,7 @@
     ./treesitter.nix
     ./autosave.nix
   ];
+  colorschemes.rose-pine = {
+  enable = true;
+  };
 }
