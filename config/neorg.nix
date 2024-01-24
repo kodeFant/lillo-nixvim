@@ -12,6 +12,13 @@
           };
         };
       };
+      "core.concealer" = {
+        config = {
+          folds = true;
+        };
+      };
+      "core.autocommands" = {};
+      "core.integrations.treesitter" = {};
     };
   };
 

@@ -5,5 +5,6 @@
     ./bufferline.nix
     ./neorg.nix
     ./treesitter.nix
+    ./autosave.nix
   ];
 }
