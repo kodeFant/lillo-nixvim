@@ -6,8 +6,10 @@
     ./neorg.nix
     ./treesitter.nix
     ./autosave.nix
+    ./ufo.nix
   ];
   colorschemes.rose-pine = {
-  enable = true;
+    enable = true;
   };
+  clipboard.register = "unnamedplus";
 }
