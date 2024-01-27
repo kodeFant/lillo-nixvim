@@ -7,9 +7,11 @@
       };
       "core.dirman" = {
         config = {
+          default_workspace  = "work";
           workspaces = {
             work = "~/kodefant-holding/";
           };
+          index = "org.norg";
         };
       };
       "core.concealer" = {
