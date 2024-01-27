@@ -11,12 +11,13 @@
           workspaces = {
             work = "~/kodefant-holding/";
           };
-          index = "org.norg";
+          index = "index.norg";
         };
       };
       "core.concealer" = {
         config = {
           folds = true;
+          icon_preset = "diamond";
         };
       };
       "core.autocommands" = {};
