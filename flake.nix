@@ -10,6 +10,7 @@
   outputs = {
     nixvim,
     flake-parts,
+    nixpkgs,
     ...
   } @ inputs: let
 
@@ -30,11 +31,12 @@
         nixvimLib = nixvim.lib.${system};
         nixvim' = nixvim.legacyPackages.${system};
         nvim = nixvim'.makeNixvimWithModule {
-          inherit pkgs;
+          pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
           module = import ./config { pkgs = pkgs; };
           # You can use `extraSpecialArgs` to pass additional arguments to your module files
           extraSpecialArgs = {
             # inherit (inputs) foo;
+            
           };
         };
       in {
