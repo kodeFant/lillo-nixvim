@@ -19,4 +19,8 @@
     direnv-vim
     vim-ormolu
   ];
+  extraConfigLua = ''
+    vim.g.mapleader = ","
+    vim.g.ormolu_command = "fourmolu"
+    '';
 }
