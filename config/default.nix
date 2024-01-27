@@ -23,7 +23,7 @@
         vim.g.mapleader = ","
         vim.g.ormolu_command = "fourmolu"
         -- vim.g.ormolu_suppress_stderr = "1"
-        vim.g.ormolu_options = {"-o -XTypeApplications", "--ghc-opt -XImportQualifiedPost"}
+        vim.g.ormolu_options = {"-o -XTypeApplications", "--ghc-opt -XImportQualifiedPost", "--no-cabal"}
 
   '';
 }
