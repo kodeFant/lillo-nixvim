@@ -13,5 +13,9 @@
     enable = true;
   };
   clipboard.register = "unnamedplus";
-  extraPlugins = [pkgs.vimPlugins.ctrlp-vim];
+  extraPlugins = with pkgs.vimPlugins; [
+    ctrlp-vim
+    haskell-tools-nvim
+    direnv-vim
+  ];
 }
