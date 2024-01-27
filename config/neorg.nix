@@ -7,9 +7,9 @@
       };
       "core.dirman" = {
         config = {
-          default_workspace  = "work";
+          default_workspace  = "main";
           workspaces = {
-            work = "~/kodefant-holding/";
+            main = "~/kodefant-holding";
           };
           index = "index.norg";
         };
@@ -19,6 +19,17 @@
           folds = true;
           icon_preset = "diamond";
         };
+      };
+      "core.journal" = {
+        config = {
+          journal_folder = "~/kodefant-holding/journal";
+          strategy = "flat";
+	};
+      };
+      "core.qol.toc" = {
+         config = {
+           close_after_use = true;
+	 };
       };
       "core.autocommands" = {};
       "core.integrations.treesitter" = {};
