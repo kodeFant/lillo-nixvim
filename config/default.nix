@@ -17,5 +17,6 @@
     ctrlp-vim
     haskell-tools-nvim
     direnv-vim
+    vim-ormolu
   ];
 }
