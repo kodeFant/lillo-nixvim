@@ -6,7 +6,7 @@
     ./neorg.nix
     ./treesitter.nix
     ./autosave.nix
-    ./ufo.nix
+    # ./ufo.nix
     ./codeium.nix
   ];
   colorschemes.rose-pine = {
