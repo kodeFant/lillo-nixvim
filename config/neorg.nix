@@ -16,8 +16,8 @@
       };
       "core.concealer" = {
         config = {
-          folds = true;
-          icon_preset = "diamond";
+          folds = false;
+          icon_preset = "basic";
         };
       };
       "core.journal" = {
