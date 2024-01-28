@@ -12,7 +12,10 @@
   colorschemes.rose-pine = {
     enable = true;
   };
-  clipboard.register = "unnamedplus";
+  clipboard = { 
+    register = "unnamedplus";
+    providers.xclip.enable = true;
+  };
   extraPlugins = with pkgs.vimPlugins; [
     ctrlp-vim
     haskell-tools-nvim
