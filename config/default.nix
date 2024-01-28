@@ -28,5 +28,13 @@
         -- vim.g.ormolu_suppress_stderr = "1"
         vim.g.ormolu_options = {"-o -XTypeApplications", "--ghc-opt -XImportQualifiedPost", "--no-cabal"}
 
+
   '';
+  autoCmd = [
+    {
+      event = [ "BufEnter" "BufWinEnter" ];
+      pattern = [ "*.norg" ];
+      command = "set conceallevel=3";
+    }
+  ];
 }
