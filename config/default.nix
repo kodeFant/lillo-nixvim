@@ -20,13 +20,12 @@
     ctrlp-vim
     haskell-tools-nvim
     direnv-vim
-    vim-ormolu
   ];
   extraConfigLua = ''
         vim.g.mapleader = ","
-        vim.g.ormolu_command = "fourmolu"
-        vim.g.ormolu_suppress_stderr = "1"
-        vim.g.ormolu_options = {"-o -XTypeApplications", "--ghc-opt -XImportQualifiedPost", "--no-cabal"}
+        -- vim.g.ormolu_command = "fourmolu"
+        -- vim.g.ormolu_suppress_stderr = "1"
+        -- vim.g.ormolu_options = {"-o -XTypeApplications", "--ghc-opt -XImportQualifiedPost", "--no-cabal"}
   '';
   autoCmd = [
     {
