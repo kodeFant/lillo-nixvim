@@ -22,7 +22,7 @@
       };
       "core.journal" = {
         config = {
-          journal_folder = "~/kodefant-holding/journal";
+          journal_folder = "journal";
           strategy = "flat";
 	};
       };
