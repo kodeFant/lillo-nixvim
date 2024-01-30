@@ -7,7 +7,7 @@
     ./treesitter.nix
     ./autosave.nix
     # ./ufo.nix
-    ./codeium.nix
+    # ./codeium.nix
   ];
   colorschemes.rose-pine = {
     enable = true;
