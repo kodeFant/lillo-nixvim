@@ -6,6 +6,7 @@
     ./neorg.nix
     ./treesitter.nix
     ./autosave.nix
+    ./copilot.nix
     # ./ufo.nix
     # ./codeium.nix
   ];
