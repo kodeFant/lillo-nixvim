@@ -7,6 +7,7 @@
     ./treesitter.nix
     ./autosave.nix
     ./copilot.nix
+    ./telescope.nix
     # ./ufo.nix
     # ./codeium.nix
   ];
@@ -22,6 +23,7 @@
     haskell-tools-nvim
     direnv-vim
   ];
+  plugins.rainbow-delimiters.enable = true;
   extraConfigLua = ''
         vim.g.mapleader = ","
         -- vim.g.ormolu_command = "fourmolu"
@@ -34,11 +36,11 @@
       pattern = [ "*.norg" ];
       command = "set conceallevel=3";
     }
- #   {
- #     event = [ "BufWritePre" ];
- #     pattern = [ "*.hs"];
- #     command = "lua vim.lsp.buf.format()";
- #   }
+    {
+      event = [ "BufWritePre" ];
+      pattern = [ "*.hs"];
+      command = "lua vim.lsp.buf.format()";
+    }
   ];
   keymaps = [
   {
