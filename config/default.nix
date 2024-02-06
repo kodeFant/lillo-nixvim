@@ -24,6 +24,10 @@
     direnv-vim
     fzf-vim
   ];
+  plugins.nvim-cmp = { 
+    enable = true;
+    completion.autocomplete = ["TextChanged"];
+  };
   plugins.rainbow-delimiters.enable = true;
   extraConfigLua = ''
         vim.g.mapleader = ","
