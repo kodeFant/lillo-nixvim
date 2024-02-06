@@ -22,6 +22,7 @@
     ctrlp-vim
     haskell-tools-nvim
     direnv-vim
+    fzf-vim
   ];
   plugins.rainbow-delimiters.enable = true;
   extraConfigLua = ''
