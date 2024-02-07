@@ -8,13 +8,16 @@
     ./autosave.nix
     ./copilot.nix
     ./telescope.nix
+    ./cmp.nix
     # ./ufo.nix
     # ./codeium.nix
   ];
   colorschemes.rose-pine = {
-    enable = true;
+    enable = false;
   };
-  clipboard = { 
+  colorschemes.tokyonight.enable = false;
+  colorschemes.gruvbox.enable = true;
+  clipboard = {
     register = "unnamedplus";
     providers.xclip.enable = true;
   };
@@ -25,28 +28,20 @@
     fzf-vim
   ];
   plugins = {
+    nix.enable = true;
+    lsp.enable = true;
+    lsp.servers.nixd.enable = true;
+    lsp-format.enable = true;
     rainbow-delimiters.enable = true;
-    nvim-cmp = { 
-      enable = true;
-      autoEnableSources = true;
-      sources = [
-    { name = "path"; }
-    { name = "buffer"; }
-    { name = "copilot"; }
-      ];
-    };
-    cmp-buffer.enable = true;
-    cmp-path.enable = true;
-    cmp-nvim-lsp.enable = true;
-  };
+ };
   extraConfigLua = ''
-        vim.g.mapleader = ","
-        -- vim.g.ormolu_command = "fourmolu"
-        -- vim.g.ormolu_suppress_stderr = "1"
-        -- vim.g.ormolu_options = {"-o -XTypeApplications", "--ghc-opt -XImportQualifiedPost", "--no-cabal"}
-	vim.cmd([[source ${./vimscript/hasql.vim}]])
-'';
-   autoCmd = [
+            vim.g.mapleader = ","
+            -- vim.g.ormolu_command = "fourmolu"
+            -- vim.g.ormolu_suppress_stderr = "1"
+            -- vim.g.ormolu_options = {"-o -XTypeApplications", "--ghc-opt -XImportQualifiedPost", "--no-cabal"}
+    	vim.cmd([[source ${./vimscript/hasql.vim}]])
+  '';
+  autoCmd = [
     {
       event = [ "BufEnter" "BufWinEnter" ];
       pattern = [ "*.norg" ];
@@ -54,18 +49,18 @@
     }
     {
       event = [ "BufWritePre" ];
-      pattern = [ "*.hs"];
+      pattern = [ "*.hs" ];
       command = "lua vim.lsp.buf.format()";
     }
   ];
   keymaps = [
-  {
-    action = "lua vim.lsp.buf.format()";
-    key = "<leader>f";
-    # lua = true;
-    options = {
-      silent = false;
-    };
-  }
+    {
+      action = "lua vim.lsp.buf.format()";
+      key = "<leader>f";
+      # lua = true;
+      options = {
+        silent = false;
+      };
+    }
   ];
 }
