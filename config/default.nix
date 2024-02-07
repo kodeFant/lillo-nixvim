@@ -24,18 +24,24 @@
     direnv-vim
     fzf-vim
   ];
-  plugins.nvim-cmp = { 
-    enable = true;
-    completion.autocomplete = ["TextChanged"];
+  plugins = {
+    rainbow-delimiters.enable = true;
+    nvim-cmp = { 
+      enable = true;
+      autoEnableSources = true;
+    };
+    cmp-buffer.enable = true;
+    cmp-path.enable = true;
+    cmp-nvim-lsp.enable = true;
   };
-  plugins.rainbow-delimiters.enable = true;
   extraConfigLua = ''
         vim.g.mapleader = ","
         -- vim.g.ormolu_command = "fourmolu"
         -- vim.g.ormolu_suppress_stderr = "1"
         -- vim.g.ormolu_options = {"-o -XTypeApplications", "--ghc-opt -XImportQualifiedPost", "--no-cabal"}
-  '';
-  autoCmd = [
+	vim.cmd([[source ${./vimscript/hasql.vim}]])
+'';
+   autoCmd = [
     {
       event = [ "BufEnter" "BufWinEnter" ];
       pattern = [ "*.norg" ];
