@@ -29,6 +29,11 @@
     nvim-cmp = { 
       enable = true;
       autoEnableSources = true;
+      sources = [
+    { name = "path"; }
+    { name = "buffer"; }
+    { name = "copilot"; }
+      ];
     };
     cmp-buffer.enable = true;
     cmp-path.enable = true;
