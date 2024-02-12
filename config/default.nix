@@ -13,10 +13,10 @@
     # ./codeium.nix
   ];
   colorschemes.rose-pine = {
-    enable = false;
+    enable = true;
   };
   colorschemes.tokyonight.enable = false;
-  colorschemes.gruvbox.enable = true;
+  colorschemes.gruvbox.enable = false;
   clipboard = {
     register = "unnamedplus";
     providers.xclip.enable = true;
@@ -33,7 +33,7 @@
     lsp.servers.nixd.enable = true;
     lsp-format.enable = true;
     rainbow-delimiters.enable = true;
- };
+  };
   extraConfigLua = ''
             vim.g.mapleader = ","
             -- vim.g.ormolu_command = "fourmolu"

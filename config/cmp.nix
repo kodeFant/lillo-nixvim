@@ -1,5 +1,6 @@
 {
-plugins = { nvim-cmp = {
+  plugins = {
+    nvim-cmp = {
       enable = true;
       autoEnableSources = true;
       sources = [
@@ -32,5 +33,5 @@ plugins = { nvim-cmp = {
     cmp-buffer.enable = true;
     cmp-path.enable = true;
     cmp-nvim-lsp.enable = true;
-    };
+  };
 }
