@@ -47,11 +47,11 @@
       pattern = [ "*.norg" ];
       command = "set conceallevel=3";
     }
-    {
-      event = [ "BufWritePre" ];
-      pattern = [ "*.hs" ];
-      command = "lua vim.lsp.buf.format()";
-    }
+    #    {
+    #      event = [ "BufWritePre" ];
+    #      pattern = [ "*.hs" ];
+    #      command = "lua vim.lsp.buf.format()";
+    #    }
   ];
   keymaps = [
     {
