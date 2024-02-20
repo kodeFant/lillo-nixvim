@@ -34,7 +34,7 @@
     lsp-format.enable = true;
     rainbow-delimiters.enable = true;
   };
-  extraConfigLua = ''
+  extraConfigLuaPre = ''
     vim.g.mapleader = ","
     -- vim.g.ormolu_command = "fourmolu"
     -- vim.g.ormolu_suppress_stderr = "1"
