@@ -35,11 +35,10 @@
     rainbow-delimiters.enable = true;
   };
   extraConfigLua = ''
-            vim.g.mapleader = ","
-            -- vim.g.ormolu_command = "fourmolu"
-            -- vim.g.ormolu_suppress_stderr = "1"
-            -- vim.g.ormolu_options = {"-o -XTypeApplications", "--ghc-opt -XImportQualifiedPost", "--no-cabal"}
-    	vim.cmd([[source ${./vimscript/hasql.vim}]])
+    vim.g.mapleader = ","
+    -- vim.g.ormolu_command = "fourmolu"
+    -- vim.g.ormolu_suppress_stderr = "1"
+    -- vim.g.ormolu_options = {"-o -XTypeApplications", "--ghc-opt -XImportQualifiedPost", "--no-cabal"}
   '';
   autoCmd = [
     {
@@ -55,7 +54,7 @@
   ];
   keymaps = [
     {
-      action = "lua vim.lsp.buf.format()";
+      action = "<cmd>lua vim.lsp.buf.format({ async = true })<CR>";
       key = "<leader>f";
       # lua = true;
       options = {
