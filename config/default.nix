@@ -61,5 +61,14 @@
         silent = false;
       };
     }
+    # keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+    {
+      action = "<cmd>lua vim.diagnostic.open_float()<CR>";
+      key = "gl";
+      mode = "n";
+      options = {
+        silent = true;
+      };
+    }
   ];
 }
