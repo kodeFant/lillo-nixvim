@@ -40,6 +40,10 @@
     -- vim.g.ormolu_suppress_stderr = "1"
     -- vim.g.ormolu_options = {"-o -XTypeApplications", "--ghc-opt -XImportQualifiedPost", "--no-cabal"}
   '';
+  extraConfigLua = ''
+    vim.wo.relativenumber = true
+    vim.wo.number = true
+  '';
   autoCmd = [
     {
       event = [ "BufEnter" "BufWinEnter" ];
