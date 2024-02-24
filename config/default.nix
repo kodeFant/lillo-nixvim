@@ -58,18 +58,26 @@
   ];
   keymaps = [
     {
-      action = "<cmd>lua vim.lsp.buf.format({ async = true })<CR>";
+      action = "function() vim.lsp.buf.format({ async = true }) end";
       key = "<leader>f";
-      # lua = true;
+      lua = true;
       options = {
-        silent = false;
+        silent = true;
       };
     }
-    # keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
     {
-      action = "<cmd>lua vim.diagnostic.open_float()<CR>";
+      action = "vim.lsp.buf.hover";
+      key = "<leader>h";
+      lua = true;
+      options = {
+        silent = true;
+      };
+    }
+    {
+      action = "vim.diagnostic.open_float";
       key = "gl";
       mode = "n";
+      lua = true;
       options = {
         silent = true;
       };
