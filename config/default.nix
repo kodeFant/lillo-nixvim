@@ -12,6 +12,10 @@
     # ./ufo.nix
     # ./codeium.nix
   ];
+  files."after/ftplugin/haskell.lua" = {
+    options.plugins = builtins.readFile ./lua/haskell.lua;
+  };
+
   colorschemes.rose-pine = {
     enable = true;
   };
@@ -33,6 +37,7 @@
     lsp.servers.nixd.enable = true;
     lsp-format.enable = true;
     rainbow-delimiters.enable = true;
+    multicursors.enable = true;
   };
   extraConfigLuaPre = ''
     vim.g.mapleader = ","
@@ -41,6 +46,7 @@
     -- vim.g.ormolu_options = {"-o -XTypeApplications", "--ghc-opt -XImportQualifiedPost", "--no-cabal"}
   '';
   extraConfigLua = ''
+    -- Line numbers
     vim.wo.relativenumber = true
     vim.wo.number = true
   '';
