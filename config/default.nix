@@ -12,9 +12,7 @@
     # ./ufo.nix
     # ./codeium.nix
   ];
-  files."after/ftplugin/haskell.lua" = {
-    options.plugins = builtins.readFile ./lua/haskell.lua;
-  };
+  extraFiles."after/ftplugin/haskell.lua" = builtins.readFile ./lua/haskell.lua;
 
   colorschemes.rose-pine = {
     enable = true;
