@@ -5,7 +5,7 @@
       autoEnableSources = true;
       sources = [
         { name = "path"; }
-        { name = "buffer"; }
+        { name = "buffer"; groupIndex = 10; }
         { name = "copilot"; }
       ];
       mapping = {

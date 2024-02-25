@@ -30,12 +30,14 @@
     fzf-vim
   ];
   plugins = {
-    nix.enable = true;
+    nix.enable = false;
     lsp.enable = true;
     lsp.servers.nixd.enable = true;
-    lsp-format.enable = true;
+    # lsp-format.enable = true;
     rainbow-delimiters.enable = true;
     multicursors.enable = true;
+    trouble.enable = true;
+    nvim-colorizer.enable = true;
   };
   extraConfigLuaPre = ''
     vim.g.mapleader = ","
@@ -62,7 +64,11 @@
   ];
   keymaps = [
     {
-      action = "function() vim.lsp.buf.format({ async = true }) end";
+      action = ''
+              	function() 
+                  vim.lsp.buf.format({ async = true }) 
+        	end
+                	'';
       key = "<leader>f";
       lua = true;
       options = {
