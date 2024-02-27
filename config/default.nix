@@ -9,7 +9,7 @@
     ./copilot.nix
     ./telescope.nix
     ./cmp.nix
-    # ./ufo.nix
+    ./ufo.nix
     # ./codeium.nix
   ];
   extraFiles."after/ftplugin/haskell.lua" = builtins.readFile ./lua/haskell.lua;
@@ -65,10 +65,10 @@
   keymaps = [
     {
       action = ''
-              	function() 
-                  vim.lsp.buf.format({ async = true }) 
-        	end
-                	'';
+        function() 
+        	vim.lsp.buf.format({ async = true }) 
+        end
+      '';
       key = "<leader>f";
       lua = true;
       options = {
