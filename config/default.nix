@@ -31,15 +31,20 @@
   ];
   plugins = {
     nix.enable = false;
-    lsp.enable = true;
-    lsp.servers.nixd.enable = true;
+    lsp = {
+      enable = true;
+      servers = {
+	nixd.enable = true;
+	html.enable = true;
+	tsserver.enable = true;
+      };
+    };
 
     # lsp-format.enable = true;
     rainbow-delimiters.enable = true;
     multicursors.enable = true;
     trouble.enable = true;
     nvim-colorizer.enable = true;
-    typescript-tools.enable = true;
   };
   extraConfigLuaPre = ''
     vim.g.mapleader = ","
