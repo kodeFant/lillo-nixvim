@@ -9,7 +9,7 @@
     ./copilot.nix
     ./telescope.nix
     ./cmp.nix
-    ./ufo.nix
+    # ./ufo.nix
     # ./codeium.nix
   ];
   extraFiles."after/ftplugin/haskell.lua" = builtins.readFile ./lua/haskell.lua;
