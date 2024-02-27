@@ -33,11 +33,13 @@
     nix.enable = false;
     lsp.enable = true;
     lsp.servers.nixd.enable = true;
+
     # lsp-format.enable = true;
     rainbow-delimiters.enable = true;
     multicursors.enable = true;
     trouble.enable = true;
     nvim-colorizer.enable = true;
+    typescript-tools.enable = true;
   };
   extraConfigLuaPre = ''
     vim.g.mapleader = ","
