@@ -37,6 +37,7 @@
 	nixd.enable = true;
 	html.enable = true;
 	tsserver.enable = true;
+	cssls.enable = true;
       };
     };
 
