@@ -28,6 +28,7 @@
     haskell-tools-nvim
     direnv-vim
     fzf-vim
+    vim-wakatime
   ];
   plugins = {
     nix.enable = false;
