@@ -34,12 +34,12 @@
     nix.enable = false;
     lsp = {
       enable = true;
+      enabledServers = [ "cssls" "tsserver" "nixd" "tailwindcss" ];
       servers = {
-	nixd.enable = true;
-	html.enable = true;
-	tsserver.enable = true;
-	cssls.enable = true;
-	tailwindcss.enable = true;
+        nixd.enable = true;
+        tsserver.enable = true;
+        cssls.enable = true;
+        tailwindcss.enable = true;
       };
     };
 
