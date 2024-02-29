@@ -39,6 +39,7 @@
 	html.enable = true;
 	tsserver.enable = true;
 	cssls.enable = true;
+	tailwindcss.enable = true;
       };
     };
 
@@ -47,6 +48,7 @@
     multicursors.enable = true;
     trouble.enable = true;
     nvim-colorizer.enable = true;
+    lsp-format.enable = true;
   };
   extraConfigLuaPre = ''
     vim.g.mapleader = ","
