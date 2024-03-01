@@ -13,7 +13,6 @@
     # ./codeium.nix
   ];
   extraFiles."after/ftplugin/haskell.lua" = builtins.readFile ./lua/haskell.lua;
-
   colorschemes.rose-pine = {
     enable = true;
   };
@@ -48,7 +47,7 @@
     multicursors.enable = true;
     trouble.enable = true;
     nvim-colorizer.enable = true;
-    lsp-format.enable = true;
+    lsp-format.enable = false;
   };
   extraConfigLuaPre = ''
     vim.g.mapleader = ","

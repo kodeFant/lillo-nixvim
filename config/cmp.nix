@@ -3,6 +3,7 @@
     nvim-cmp = {
       enable = true;
       autoEnableSources = true;
+      preselect = "None";
       sources = [
         { name = "path"; }
         { name = "buffer"; groupIndex = 10; }
@@ -13,7 +14,7 @@
         "<C-d>" = "cmp.mapping.scroll_docs(-4)";
         "<C-e>" = "cmp.mapping.close()";
         "<C-f>" = "cmp.mapping.scroll_docs(4)";
-        "<CR>" = "cmp.mapping.confirm({ select = true })";
+        "<CR>" = "cmp.mapping.confirm({ select = false })";
         "<S-Tab>" = {
           action = "cmp.mapping.select_prev_item()";
           modes = [
